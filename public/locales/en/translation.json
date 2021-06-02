@@ -1,0 +1,12 @@
+{
+  "title": "Welcome to React",
+  "login": {
+    "title": "Sign in",
+    "email": "Email Address",
+    "password": "Password",
+    "remember": "Remember me",
+    "submit": "SIGN IN",
+    "forgot-password": "Forgot password?",
+    "sign-up": "Don`t have an account?Sign Up"
+  }
+}

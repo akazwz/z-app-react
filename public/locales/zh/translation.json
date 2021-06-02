@@ -1,0 +1,12 @@
+{
+  "title": "欢迎来到 React",
+  "login": {
+    "title": "登录",
+    "email": "邮箱地址",
+    "password": "密码",
+    "remember": "记住我",
+    "submit": "登录",
+    "forgot-password": "忘记密码?",
+    "sign-up": "还没有账号?注册"
+  }
+}

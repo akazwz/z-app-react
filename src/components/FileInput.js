@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Button from "@material-ui/core/Button";
 
 class FileInput extends Component {
     constructor(props) {
@@ -21,7 +22,7 @@ class FileInput extends Component {
                     <input type="file" ref={this.fileInput}/>
                 </label>
                 <br/>
-                <button type="submit">Submit</button>
+                <Button type="submit" variant="contained" color="primary">Submit</Button>
             </form>
         )
     }
