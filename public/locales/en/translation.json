@@ -2,7 +2,7 @@
   "title": "Welcome to React",
   "login": {
     "title": "Sign in",
-    "email": "Email Address",
+    "username": "Username",
     "password": "Password",
     "remember": "Remember me",
     "submit": "SIGN IN",

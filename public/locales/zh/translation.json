@@ -2,7 +2,7 @@
   "title": "欢迎来到 React",
   "login": {
     "title": "登录",
-    "email": "邮箱地址",
+    "username": "用户名",
     "password": "密码",
     "remember": "记住我",
     "submit": "登录",
