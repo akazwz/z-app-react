@@ -1,5 +1,6 @@
 import React, {Suspense} from "react";
-import Login from "./pages/Login";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 function Loading() {
     return (
@@ -12,7 +13,7 @@ function Loading() {
 export default function App() {
     return (
         <Suspense fallback={<Loading/>}>
-            <Login/>
+            <SignUp/>
         </Suspense>
     )
 }
