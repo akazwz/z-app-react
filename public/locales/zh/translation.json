@@ -1,6 +1,6 @@
 {
   "title": "欢迎来到 React",
-  "login": {
+  "sign-in": {
     "title": "登录",
     "username": "用户名",
     "password": "密码",
@@ -8,5 +8,14 @@
     "submit": "登录",
     "forgot-password": "忘记密码?",
     "sign-up": "还没有账号?注册"
+  },
+  "sign-up": {
+    "title": "注册",
+    "username": "用户名",
+    "nickname": "昵称",
+    "password": "密码",
+    "agree-user-policy": "同意用户政策",
+    "submit": "注册",
+    "sign-in": "已经有账号了?登录"
   }
 }

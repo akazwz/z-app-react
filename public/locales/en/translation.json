@@ -1,6 +1,6 @@
 {
   "title": "Welcome to React",
-  "login": {
+  "sign-in": {
     "title": "Sign in",
     "username": "Username",
     "password": "Password",
@@ -8,5 +8,14 @@
     "submit": "SIGN IN",
     "forgot-password": "Forgot password?",
     "sign-up": "Don`t have an account?Sign Up"
+  },
+  "sign-up": {
+    "title": "Sign up",
+    "username": "Username",
+    "nickname": "Nickname",
+    "password": "Password",
+    "agree-user-policy": "Agree User Policy",
+    "submit": "SIGN UP",
+    "sign-in": "Already have an account?Sign Up"
   }
 }

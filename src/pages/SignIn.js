@@ -11,63 +11,14 @@ import Box from "@material-ui/core/Box";
 import LockOutLinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
-import {useTranslation, withTranslation} from "react-i18next";
+import {withTranslation} from "react-i18next";
 import {withStyles} from "@material-ui/core";
 import {compose} from "redux";
 import {login} from "../apis/utils";
+import Copyright from "../components/Copyright";
+import ChangeLanguages from "../components/ChangeLanguages";
 
-function handleSubmit(event) {
-    event.preventDefault()
-    alert(event)
-    console.log(event)
-}
-
-// 切换语言按钮,简体中文和English
-function ChangeLanguages() {
-    const {i18n} = useTranslation();
-
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng).then()
-    }
-    return (
-        <Grid container>
-            <Grid item xs>
-                <Button
-                    type="button"
-                    color="primary"
-                    onClick={() => changeLanguage('en')}
-                >
-                    English
-                </Button>
-            </Grid>
-            <Grid item>
-                <Button
-                    type="button"
-                    color="primary"
-                    onClick={() => changeLanguage('zh')}
-                >
-                    简体中文
-                </Button>
-            </Grid>
-        </Grid>
-    )
-}
-
-// 版权声明
-function Copyright() {
-    return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright ©'}
-            <Link color="inherit" href="https://akazwz.com/">
-                AKAZWZ
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
-    )
-}
-
-const useStyles = theme => ({
+const styles = theme => ({
     paper: {
         marginTop: theme.spacing(8),
         display: 'flex',
@@ -88,7 +39,7 @@ const useStyles = theme => ({
 });
 
 // input组件是不受控组件,要用 class component 来控制组件,单一数据源 input controlled component
-class Login extends Component {
+class SignIn extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -111,7 +62,6 @@ class Login extends Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state.username)
-        alert('username:' + this.state.username + 'password:' + this.state.password)
         const loginData = {username: this.state.username, password: this.state.password}
         login(loginData).then(res => {
             const {data, code, msg} = res
@@ -133,16 +83,16 @@ class Login extends Component {
                         <LockOutLinedIcon/>
                     </Avatar>
                     <Typography component="h1" variant="h5">
-                        {t('login.title')}
+                        {t('sign-in.title')}
                     </Typography>
-                    <form className={classes.form} noValidate onSubmit={handleSubmit}>
+                    <form className={classes.form} noValidate onSubmit={this.handleSubmit}>
                         <TextField
                             variant="outlined"
                             margin="normal"
                             required
                             fullWidth
                             id="username"
-                            label={t('login.username')}
+                            label={t('sign-in.username')}
                             name="username"
                             autoComplete="username"
                             autoFocus
@@ -155,7 +105,7 @@ class Login extends Component {
                             required
                             fullWidth
                             name="password"
-                            label={t('login.password')}
+                            label={t('sign-in.password')}
                             type="password"
                             id="password"
                             autoComplete="current-password"
@@ -164,7 +114,7 @@ class Login extends Component {
                         />
                         <FormControlLabel
                             control={<Checkbox value="remember" color="primary"/>}
-                            label={t('login.remember')}
+                            label={t('sign-in.remember')}
                         />
                         <Button
                             type="submit"
@@ -174,17 +124,17 @@ class Login extends Component {
                             className={classes.submit}
                             onClick={this.handleSubmit}
                         >
-                            {t('login.submit')}
+                            {t('sign-in.submit')}
                         </Button>
                         <Grid container>
                             <Grid item xs>
                                 <Link href="#" variant="body2">
-                                    {t('login.forgot-password')}
+                                    {t('sign-in.forgot-password')}
                                 </Link>
                             </Grid>
                             <Grid item>
                                 <Link href="#" variant="body2">
-                                    {t('login.sign-up')}
+                                    {t('sign-in.sign-up')}
                                 </Link>
                             </Grid>
                         </Grid>
@@ -203,5 +153,5 @@ class Login extends Component {
 
 export default compose(
     withTranslation(),
-    withStyles(useStyles, {withTheme: true})
-)(Login)
+    withStyles(styles, {withTheme: true})
+)(SignIn)
