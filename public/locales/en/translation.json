@@ -17,6 +17,8 @@
     "password": "Password",
     "agree-user-policy": "Agree User Policy",
     "submit": "SIGN UP",
-    "sign-in": "Already have an account?Sign Up"
+    "sign-in": "Already have an account?Sign Up",
+    "sign-up-success-message": "Sign up success!",
+    "sign-up-fail-message": "Sign up failed!"
   }
 }

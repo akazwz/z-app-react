@@ -17,6 +17,8 @@
     "password": "密码",
     "agree-user-policy": "同意用户政策",
     "submit": "注册",
-    "sign-in": "已经有账号了?登录"
+    "sign-in": "已经有账号了?登录",
+    "sign-up-success-message": "注册成功",
+    "sign-up-fail-message": "注册失败"
   }
 }

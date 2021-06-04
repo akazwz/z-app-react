@@ -8,8 +8,7 @@ import {withTranslation} from "react-i18next";
 import {compose} from "redux";
 import MD5 from "crypto-js/md5"
 import EncLatin1 from "crypto-js/enc-latin1"
-import EncHex from "crypto-js/enc-hex"
-import {fileUpload} from "../apis/utils";
+import {avatarUpload} from "../apis/utils";
 
 const styles = theme => ({
     large: {
@@ -49,9 +48,16 @@ class AvatarUpload extends Component {
             const formData = new FormData()
             formData.append('file', file)
             formData.append('md5', md5HashString)
-            fileUpload(formData)
+            avatarUpload(formData)
                 .then((data) => {
-                    console.log(data)
+                    if (data.code === 2000) {
+                        const base = 'http://47.96.24.50:8000/';
+                        const url = base + data.data.url;
+                        this.setState({
+                            src: url
+                        })
+                        this.props.handleUrl(url)
+                    }
                 })
         }
     }
