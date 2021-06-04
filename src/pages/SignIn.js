@@ -14,7 +14,7 @@ import Container from "@material-ui/core/Container";
 import {withTranslation} from "react-i18next";
 import {withStyles} from "@material-ui/core";
 import {compose} from "redux";
-import {login} from "../apis/utils";
+import {signIn} from "../apis/utils";
 import Copyright from "../components/Copyright";
 import ChangeLanguages from "../components/ChangeLanguages";
 
@@ -62,8 +62,8 @@ class SignIn extends Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state.username)
-        const loginData = {username: this.state.username, password: this.state.password}
-        login(loginData).then(res => {
+        const signInData = {username: this.state.username, password: this.state.password}
+        signIn(signInData).then(res => {
             const {data, code, msg} = res
             const {token} = data
             if (code === 2000) {

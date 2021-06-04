@@ -11,6 +11,7 @@
   },
   "sign-up": {
     "title": "注册",
+    "chose-avatar": "选择头像",
     "username": "用户名",
     "nickname": "昵称",
     "password": "密码",
