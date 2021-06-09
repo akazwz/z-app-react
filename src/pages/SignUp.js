@@ -18,7 +18,6 @@ import AvatarUpload from "../components/AvatarUpload";
 import {signUp} from "../apis/utils";
 import SnackBarMessage from "../components/SnackBarMessage";
 
-
 // 定义样式
 const styles = theme => ({
     paper: {
@@ -145,7 +144,6 @@ class SignUp extends Component {
                                     fullWidth
                                     id="username"
                                     label={t('sign-up.username')}
-                                    autoFocus
                                     onChange={this.handleUsernameChange}
                                 />
                             </Grid>

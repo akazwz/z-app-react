@@ -95,7 +95,6 @@ class SignIn extends Component {
                             label={t('sign-in.username')}
                             name="username"
                             autoComplete="username"
-                            autoFocus
                             value={this.state.username}
                             onChange={this.handleUsernameChange}
                         />
