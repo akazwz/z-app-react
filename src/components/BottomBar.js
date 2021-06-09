@@ -7,7 +7,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import FaceIcon from '@material-ui/icons/Face';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import {Link} from "react-router-dom";
+import {Link, useRouteMatch} from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -24,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
 export default function BottomBar() {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
+
+    let { path, url } = useRouteMatch();
 
     return (
         <AppBar position="fixed" color="primary" className={classes.appBar}>

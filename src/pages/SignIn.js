@@ -5,7 +5,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-import Link from "@material-ui/core/Link"
+import {Link} from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import LockOutLinedIcon from "@material-ui/icons/LockOutlined";
@@ -132,7 +132,7 @@ class SignIn extends Component {
                                 </Link>
                             </Grid>
                             <Grid item>
-                                <Link href="#" variant="body2">
+                                <Link to="/sign-up" variant="body2">
                                     {t('sign-in.sign-up')}
                                 </Link>
                             </Grid>
