@@ -20,5 +20,10 @@
     "sign-in": "已经有账号了?登录",
     "sign-up-success-message": "注册成功",
     "sign-up-fail-message": "注册失败"
+  },
+  "bottom-bar": {
+    "home": "主页",
+    "digest": "书摘",
+    "profile": "账户"
   }
 }

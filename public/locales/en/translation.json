@@ -20,5 +20,10 @@
     "sign-in": "Already have an account?Sign Up",
     "sign-up-success-message": "Sign up success!",
     "sign-up-fail-message": "Sign up failed!"
+  },
+  "bottom-bar": {
+    "home": "Home",
+    "digest": "Digest",
+    "profile": "Profile"
   }
 }

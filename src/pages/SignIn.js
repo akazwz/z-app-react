@@ -8,7 +8,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 import {Link} from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
-import LockOutLinedIcon from "@material-ui/icons/LockOutlined";
+import FingerprintIcon from '@material-ui/icons/Fingerprint';
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import {withTranslation} from "react-i18next";
@@ -19,6 +19,9 @@ import Copyright from "../components/Copyright";
 import ChangeLanguages from "../components/ChangeLanguages";
 
 const styles = theme => ({
+    main: {
+        width: '100%'
+    },
     paper: {
         marginTop: theme.spacing(8),
         display: 'flex',
@@ -76,15 +79,15 @@ class SignIn extends Component {
     render() {
         const {classes, t} = this.props
         return (
-            <Container component="main" maxWidth="xs">
+            <Container component="main" maxWidth="xs" className={classes.main}>
                 <CssBaseline/>
                 <div className={classes.paper}>
-                    <Avatar className={classes.avatar}>
-                        <LockOutLinedIcon/>
-                    </Avatar>
                     <Typography component="h1" variant="h5">
                         {t('sign-in.title')}
                     </Typography>
+                    <Avatar className={classes.avatar}>
+                        <FingerprintIcon/>
+                    </Avatar>
                     <form className={classes.form} noValidate onSubmit={this.handleSubmit}>
                         <TextField
                             variant="outlined"
