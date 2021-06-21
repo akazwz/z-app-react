@@ -3,7 +3,7 @@ import * as echarts from "echarts"
 
 function MyChart() {
     const chartRef = useRef(null);
-    const [state, setState] = useState('this is my charts');
+    const [title, setTitle] = useState('this is my charts');
 
     function initEcharts() {
         const myChart = echarts.init(chartRef.current)
@@ -26,11 +26,12 @@ function MyChart() {
 
     useEffect(() => {
         initEcharts()
-    });
+        setTitle('new title')
+    }, []);
 
     return (
         <div>
-            <h1>{state}</h1>
+            <h1>{title}</h1>
             <div style={{width: "500px", height: "500px"}} ref={chartRef}/>
         </div>
 
