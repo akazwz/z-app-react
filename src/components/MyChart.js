@@ -1,10 +1,9 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import * as echarts from "echarts"
 
-
 function MyChart() {
-
     const chartRef = useRef(null);
+    const [state, setState] = useState('this is my charts');
 
     function initEcharts() {
         const myChart = echarts.init(chartRef.current)
@@ -31,8 +30,8 @@ function MyChart() {
 
     return (
         <div>
-            <h1>This is MyChart</h1>
-            <div style={{width: "500px", height: "500px"}} ref={chartRef} />
+            <h1>{state}</h1>
+            <div style={{width: "500px", height: "500px"}} ref={chartRef}/>
         </div>
 
     )
