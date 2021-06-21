@@ -43,6 +43,7 @@ export default function BottomBar(props) {
                         <BottomNavigationAction label={t("bottom-bar.digest")} icon={<BookmarkBorderIcon/>} component={Link}
                                                 to="/digest"/>
                         <BottomNavigationAction label={t("bottom-bar.profile")} icon={<PersonIcon/>} component={Link} to="/sign-in"/>
+                        <BottomNavigationAction label={t("bottom-bar.profile")} icon={<PersonIcon/>} component={Link} to="/test"/>
                     </BottomNavigation>
                 </Toolbar>
             </AppBar>

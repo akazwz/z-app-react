@@ -5,6 +5,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Digest from "./pages/Digest";
 import BottomBar from "./components/BottomBar";
+import Test from "./pages/Test";
 
 function Loading() {
     return (
@@ -14,8 +15,6 @@ function Loading() {
     )
 }
 
-
-
 export default function App() {
     return (
         <Suspense fallback={<Loading/>}>
@@ -24,6 +23,7 @@ export default function App() {
                 <Route exact path="/digest" component={Digest}/>
                 <Route exact path="/sign-in" component={SignIn}/>
                 <Route exact path="/sign-up" component={SignUp}/>
+                <Route exact path="/test" component={Test}/>
             </Switch>
             <BottomBar/>
         </Suspense>
