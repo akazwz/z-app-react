@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import Snackbar from "@material-ui/core/Snackbar";
 import MuiAlert from "@material-ui/lab/Alert"
-import Button from "@material-ui/core/Button";
 import {compose} from "redux";
 import {withTranslation} from "react-i18next";
 import {withStyles} from "@material-ui/core";
